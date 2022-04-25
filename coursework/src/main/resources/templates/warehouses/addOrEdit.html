@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="IS0-8859-1">
+        <title>Insert title here</title>
+
+
+    </head>
+
+    <body>
+        <form th:action="@{/warehouses/saveOrUpdate}" method="post" th:object="${warehouse}">
+<!--            <div th:if="${id} > 0}">-->
+<!--                -->
+<!--            </div>-->
+            <input th:field="*{id}" placeholder="Warehouse ID"> <br />
+
+            <input type="text" th:field="*{name}" placeholder="Name" /> <br />
+            <input type="submit" value="Add" />
+        </form>
+
+
+    </body>
+
+</html>
